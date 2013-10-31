@@ -1,0 +1,108 @@
+﻿@model EnlaceNoivas.Models.Provider
+@{
+    ViewBag.Title = Model.Name;
+    ViewBag.Action = "Profile";
+    ViewBag.Controller = "Provider";
+}
+<div class="row">
+    <div class="col-lg-2">
+        <div id="col-left">
+            <div id="avatar-image">
+                <img src="../@Model.ImagePath" />
+            </div>
+            <div class="blue-space">
+            </div>
+            <div id="content">
+                <p class="name">@Model.Name</p>
+                <div class="go-right">
+                    <p class="type">@Model.Type</p>
+                    <a data-toggle="modal" href="#modal-contato" class="btn btn-info">contato</a>
+                </div>
+            </div>
+            <div class="gray-space"></div>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="row" id="row-content">
+            <div class="col-lg-4">
+                <div id="header"><p>Sobre</p></div>
+                <div id="about-content">
+                    <p>@Model.City</p>
+                    <p>@Model.Street , @Model.Number</p>
+                    <br />
+                    <p>@Model.Phone1</p>
+                    <p>@Model.Phone2</p>
+                    <br />
+                    <a>@Model.Site</a>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div id="header"><p>Galeria</p></div>
+                <div id="galary-content">
+                    @if (@Model.Galary == null)
+                    {
+                        <div class="alert alert-warning" id="alert-no-photos">
+                            <div><span class="glyphicon glyphicon-exclamation-sign" id="icon" /></div>
+                            <p>Desculpe, esse fornecedor não tem fotos ainda   :(</p>
+                        </div>
+                    }
+                    else { 
+                        foreach (EnlaceNoivas.Models.PhotoOfProvider photo in @Model.Galary) { 
+                            <div id="photo">
+                                <img src="@photo.ImagePath"/>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@if (@Model.User == null || @Model.User.Email == null)
+{
+    <div class="modal fade" id="modal-contato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Erro :(</h4>
+                </div>
+                <div class="modal-body">
+                    O Email de @Model.Name não foi cadastrado 
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+}
+else
+{
+    <div class="modal fade" id="modal-contato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Enviar mensagem para @Model.Name</h4>
+                </div>
+                <div class="modal-body">
+                    @using (Html.BeginForm())
+                    {
+                        <div class="form-group">
+                            @Html.TextBox("Name", "", new { @class = "form-control", @placeholder = "Nome" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextBox("Email", "", new { @class = "form-control", @placeholder = "E-mail" })
+                        </div>
+                        <div class="form-group">
+                            @Html.TextArea("Message", "", new { @class = "form-control", @placeholder = "Mensagem", @rows = 4 })
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Enviar" class="btn btn-info">
+                        </div>
+                    }
+                </div>
+
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+}

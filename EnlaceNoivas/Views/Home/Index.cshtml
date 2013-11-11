@@ -1,3 +1,111 @@
-﻿@{
+﻿@model EnlaceNoivas.ViewModels.IndexModel
+@{
     ViewBag.Title = "Enlace Noivas";
+    ViewBag.Controller = "Home";
+    ViewBag.Action = "Index";
 }
+<div class="row">
+    <div class="col-lg-12">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="@Url.Content("~/Content/Images/Site/bunner.png")">
+                    <div class="carousel-caption">
+                        <div id="text-bunner">
+                            <p>Crie o site do seu</p>
+                            <p>casamento gratuitamente</p>
+                            @Html.ActionLink("Cadastrar-se", "Create", "Couple", new { @class="btn btn-info"})
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row" id="menu-home">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-7">
+        <a href="#">Institucional</a>
+        <a href="#">Guia Online</a>
+        <a href="#">Anuncie</a>
+        <a href="#">Fornecedores</a>
+        <a href="#">Contato</a>
+        <a href="#">Blog</a>
+    </div>
+    <div class="col-lg-4"></div>
+</div>
+<div class="row top-title">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-7">
+        <div class="row">
+            <div class="bunner-start-here">
+                <img src="@Url.Content("~/Content/Images/Site/start-here.png")" />
+            </div>
+        </div>
+        <h2 id="blog-header">Blog</h2>
+        <div class="row">
+            @foreach (var post in Model.Posts) {
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div id="img-post">
+                                <img src="@Url.Content(post.Image)"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-7" id="text-post">
+                            <h3>@post.Description</h3>
+                            <p>@post.Content</p>
+                            <a href="#">Veja a matéria completa</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div id="top-couples">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>os 5 Sites mais visitados</h3>
+                </div>
+            </div>
+            @* com erros a serem convertados*@
+            @*
+            @{int count = 1}
+                @foreach (var couple in Model) {
+                    count++;
+                    <div class="row">
+                        <div class="col-lg-3" id="count">
+                            <p>@count</p>
+                        </div>
+                        <div class="col-lg-9" id="name-and-amount">
+                            <p class="couple-name">@couple.BrideName e @couple.GroomName</p>
+                            <p class="voute-count">@couple.VouteCount</p>
+                        </div>
+                    </div>
+                }
+            *@
+            <div class="row top-title">
+                <div class="col-lg-12">
+                    <h4>Crie seu site e ganhe prêmios!</h4>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+</div>

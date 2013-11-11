@@ -1,0 +1,76 @@
+﻿#text-bunner {
+    float:left;
+}
+#text-bunner p{
+    text-align:justify;
+    font-size:45px;
+    margin-bottom:-10px;
+}
+#text-bunner a {
+    margin-top:5px;
+    float:left;
+    padding:5px 20px;
+    border-radius:20px;
+}
+#menu-home {
+    height:50px;
+    background:#e4fcff;
+}
+#menu-home .col-lg-7 {
+    margin-top:10px;
+}
+#menu-home .col-lg-7 a{
+    margin:0px 15px;
+    font-size:20px;
+    color:#19a8b8;
+}
+#menu-home .col-lg-7 a:hover{
+    color:#49d4e4;
+}
+.bunner-start-here {
+    margin-top:20px;
+}
+#top-couples {
+    margin-top:15px;
+}
+#top-couples .row .col-lg-12{
+    background-color:#0ac0d5;
+}
+#top-couples .row .col-lg-12 h3, h4 {
+    padding:20px 15px;
+    color:#fff;
+}
+#count{
+    background:#134f57;
+}
+#count p{
+    font-size:15px;
+    color:#fff;
+}
+#name-and-amount{
+    background:#218996;
+}
+#name-and-amount p {
+    font-size:15px;
+    color:#fff;
+}
+#text-post h3 {
+    color:#218996;
+    font-size :20px;
+}
+#text-post a,p {
+    font-size:11px;
+}
+#img-post{
+    margin-top:30px;
+}
+#img-post img{
+    width:130px;
+    height:100px;
+}
+#blog-header {
+    margin-top:20px;
+    margin-bottom:-10px;
+    font-size:26px;
+    color:#0ac0d5;
+}

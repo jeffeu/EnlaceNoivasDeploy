@@ -12,5 +12,6 @@ namespace EnlaceNoivas.Models
         public DbSet<Couple> Couple { get; set; }
         public DbSet<Provider> Provider { get; set; }
         public DbSet<PhotoOfProvider> PhotoOfProvider { get; set; }
+        public DbSet<PostBlog> PostBlog { get; set; }
     }
 }

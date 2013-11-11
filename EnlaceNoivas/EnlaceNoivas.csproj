@@ -206,19 +206,37 @@
     <Compile Include="Migrations\201310211723015_AddPhotoOdProviderTable.Designer.cs">
       <DependentUpon>201310211723015_AddPhotoOdProviderTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201311041653125_AddCountVoteToCouple.cs" />
+    <Compile Include="Migrations\201311041653125_AddCountVoteToCouple.Designer.cs">
+      <DependentUpon>201311041653125_AddCountVoteToCouple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201311061347599_addPostBlogTable.cs" />
+    <Compile Include="Migrations\201311061347599_addPostBlogTable.Designer.cs">
+      <DependentUpon>201311061347599_addPostBlogTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Couple.cs" />
     <Compile Include="Models\ModelContext.cs" />
     <Compile Include="Models\PhotoOfProvider.cs" />
+    <Compile Include="Models\PostBlog.cs" />
     <Compile Include="Models\Provider.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CoupleUser.cs" />
+    <Compile Include="ViewModels\IndexModel.cs" />
     <Compile Include="ViewModels\ProviderMV.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Home\Index.css" />
     <Content Include="Content\Images\default.png" />
     <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\Images\Posts\Flower.png" />
+    <Content Include="Content\Images\Site\bunner.png" />
+    <Content Include="Content\Images\Site\enlace-logo.png" />
+    <Content Include="Content\Images\Site\Icons\face-icon.png" />
+    <Content Include="Content\Images\Site\Icons\pint-icon.png" />
+    <Content Include="Content\Images\Site\Icons\twitter-icon.png" />
+    <Content Include="Content\Images\Site\start-here.png" />
     <Content Include="Content\Layout\layout.css" />
     <Content Include="Content\Provider\Create.css" />
     <Content Include="Content\Provider\Profile.css" />
@@ -389,6 +407,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201310211723015_AddPhotoOdProviderTable.resx">
       <DependentUpon>201310211723015_AddPhotoOdProviderTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311041653125_AddCountVoteToCouple.resx">
+      <DependentUpon>201311041653125_AddCountVoteToCouple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201311061347599_addPostBlogTable.resx">
+      <DependentUpon>201311061347599_addPostBlogTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

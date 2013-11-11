@@ -1,6 +1,12 @@
 ﻿body {
     height:100%;
 }
+#logo {
+    margin-top:15px;
+}
+#icons{
+    margin-top:20px;
+}
 .btn-info:hover {
     background-color:#3A9DBB;
 }
@@ -11,6 +17,7 @@
     width: 400px;
 }
 #nav-top {
+    border-bottom: 5px solid #19a8b8;
     background: #0ac0d5;
     height: 70px;
 }
@@ -109,4 +116,9 @@ DIV#image {
 }
 .ui-menu-item {
     border-bottom:1px solid #f2f2f2;
+}
+#bottom-site{
+    margin-top:100px;
+    height:150px;
+    background:#95d0d7;
 }

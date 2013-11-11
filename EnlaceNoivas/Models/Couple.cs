@@ -12,7 +12,7 @@ namespace EnlaceNoivas.Models
         public string GroomName { get; set; }
         public DateTime MerriedDate { get; set; }
         public string CoupleUrl { get; set; }
-
+        public int VouteCount { get; set; }
         public User User { get; set; }
 
     }

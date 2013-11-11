@@ -1,8 +1,10 @@
-﻿using System;
+﻿using EnlaceNoivas.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using EnlaceNoivas.ViewModels;
 
 namespace EnlaceNoivas.Controllers
 {
@@ -10,10 +12,15 @@ namespace EnlaceNoivas.Controllers
     {
         //
         // GET: /Home/
+        //
 
+        public ModelContext db = new ModelContext();
         public ActionResult Index()
         {
-            return View();
+            IndexModel model = new IndexModel() { 
+                TopCouples = db.Couple.OrderBy(c => c.VouteCount).Take(5), 
+                Posts= db.PostBlog.Take(6)};
+            return View(model);
         }
 
     }

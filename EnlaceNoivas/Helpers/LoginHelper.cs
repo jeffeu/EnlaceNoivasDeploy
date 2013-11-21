@@ -9,7 +9,7 @@ namespace EnlaceNoivas.Helpers
     public class LoginHelper
     {
         public static User getCurrentUser(string UserOrEmail){
-            dbContext db = new dbContext();
+            db db = new db();
             return db.User.Where(user => user.Username == UserOrEmail || user.Email == UserOrEmail).FirstOrDefault();
         }
     }

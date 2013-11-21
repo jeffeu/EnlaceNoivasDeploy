@@ -6,7 +6,7 @@ using System.Web;
 
 namespace EnlaceNoivas.Models
 {
-    public class dbContext : DbContext
+    public class db : DbContext
     {
         public DbSet<User> User { get; set; }
         public DbSet<Couple> Couple { get; set; }

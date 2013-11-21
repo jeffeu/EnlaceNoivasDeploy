@@ -14,7 +14,7 @@ namespace EnlaceNoivas.Controllers
         // GET: /Home/
         //
 
-        public dbContext db = new dbContext();
+        public db db = new db();
         public ActionResult Index()
         {
             IndexModel model = new IndexModel() { 

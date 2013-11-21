@@ -12,7 +12,7 @@ namespace EnlaceNoivas.Controllers
     {
         //
         // GET: /Provider/
-        private ModelContext db = new ModelContext();
+        private dbContext db = new dbContext();
         public ActionResult Create()
         {
             return View();

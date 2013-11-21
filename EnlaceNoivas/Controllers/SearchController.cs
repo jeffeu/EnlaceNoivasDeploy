@@ -12,7 +12,7 @@ namespace EnlaceNoivas.Controllers
         //
         // GET: /Search/
         private int resultMount = 3;
-        private ModelContext db = new ModelContext();
+        private dbContext db = new dbContext();
         public ActionResult SearchProvider(int page, string searched)
         {
             ViewBag.Searched = searched;

@@ -5,14 +5,14 @@ namespace EnlaceNoivas.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<EnlaceNoivas.Models.ModelContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<EnlaceNoivas.Models.dbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(EnlaceNoivas.Models.ModelContext context)
+        protected override void Seed(EnlaceNoivas.Models.dbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

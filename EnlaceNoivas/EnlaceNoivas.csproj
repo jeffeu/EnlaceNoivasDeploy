@@ -216,7 +216,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Couple.cs" />
-    <Compile Include="Models\ModelContext.cs" />
+    <Compile Include="Models\dbContext.cs" />
     <Compile Include="Models\PhotoOfProvider.cs" />
     <Compile Include="Models\PostBlog.cs" />
     <Compile Include="Models\Provider.cs" />

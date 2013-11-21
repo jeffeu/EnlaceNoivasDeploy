@@ -14,7 +14,7 @@ namespace EnlaceNoivas.Controllers
     {
         //
         // GET: /User/
-        private ModelContext db = new ModelContext();
+        private dbContext db = new dbContext();
         public ActionResult Create()
         {
             return View();

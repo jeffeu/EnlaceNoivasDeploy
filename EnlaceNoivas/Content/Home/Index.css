@@ -1,6 +1,9 @@
 ﻿#text-bunner {
     float:left;
 }
+#img-content img{
+    width:100%;
+}
 #text-bunner p{
     text-align:justify;
     font-size:45px;

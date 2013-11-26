@@ -19,8 +19,10 @@ namespace EnlaceNoivas.Controllers
         }
         public ActionResult Register(ProviderMV prov)
         {
-            /*db.Provider.Add(prov.Provider);
-            db.SaveChanges();*/
+            db.Provider.Add(prov.Provider);
+            db.SaveChanges();
+            return View("Create");
+            /*
             return View("Create");
             if (ModelState.IsValid)
             {
@@ -32,7 +34,7 @@ namespace EnlaceNoivas.Controllers
             }
             else {
                 return View("Create");
-            }
+            }*/
         }
         public ActionResult Profile(string providerName) {
             providerName = providerName.Replace("_", " ");

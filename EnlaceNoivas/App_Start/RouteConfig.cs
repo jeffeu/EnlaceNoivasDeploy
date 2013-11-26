@@ -14,7 +14,7 @@ namespace EnlaceNoivas
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 name: "ProfileProvider",
-                url: "Provider/{providerName}",
+                url: "Fornecedor/Perfil/{providerName}",
                 defaults: new { controller = "Provider", action = "Profile"}
             );
             routes.MapRoute(

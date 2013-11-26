@@ -38,6 +38,8 @@ namespace EnlaceNoivas
                         "~/Content/User/Create.css"));
             bundles.Add(new StyleBundle("~/Provider/Create.css").Include(
                         "~/Content/Provider/Create.css"));
+            bundles.Add(new ScriptBundle("~/Provider/Create.js").Include(
+                        "~/Content/Provider/Create.js"));
             bundles.Add(new StyleBundle("~/Provider/Profile.css").Include(
                         "~/Content/Provider/Profile.css"));
             bundles.Add(new StyleBundle("~/Home/Index.css").Include(
@@ -46,6 +48,7 @@ namespace EnlaceNoivas
             //end actions css
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
+            
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
             bundles.Add(new ScriptBundle("~/jqueryui.js").Include("~/Scripts/jquery-ui-1.8.20.js"));

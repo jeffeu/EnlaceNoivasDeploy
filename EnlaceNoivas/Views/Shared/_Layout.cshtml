@@ -17,55 +17,56 @@
 </head>
 
 <body>
-
-    <div id="nav-top" class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-2">
-            <div id="logo">
-                <a href="@Url.Action("Index","Home")"><img src="@Url.Content("~/Content/Images/Site/enlace-logo.png")" /></a>
-            </div>
-        </div>
-        <div class="col-md-2"></div>
-        <div id="right-menu" class="col-md-2">
-            @if (current_user != null)
-            {
-                <div class="btn-group">
-                    <a class="btn btn-link" data-toggle="dropdown" id="link">
-                        <span class="glyphicon glyphicon-cog"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>@Html.ActionLink("Sair", "SignOut", "User")</li>
-                    </ul>
+    <div id="content">
+        <div id="nav-top" class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <div id="logo">
+                    <a href="@Url.Action("Index","Home")"><img src="@Url.Content("~/Content/Images/Site/enlace-logo.png")" /></a>
                 </div>
-                @Html.ActionLink(current_user.Username, "Profile", "User", current_user.ID, new { @class = "btn btn-link", @id = "link" })
-            }
-            else
-            {
-                <a data-toggle="modal" href="#myModal" class="btn btn-link" id="link">Entrar</a>
-            }
-        </div>
-        <div class="col-md-1">
-            <div id="icons">
-                <a href="#"><img src="@Url.Content("~/Content/Images/Site/Icons/face-icon.png")" /></a>
-                <a href="#"><img src="@Url.Content("~/Content/Images/Site/Icons/twitter-icon.png")" /></a>
-                <a href="#"><img src="@Url.Content("~/Content/Images/Site/Icons/pint-icon.png")" /></a>
             </div>
-        </div>
-        <div class="col-md-4" id="search">
-            @using (Html.BeginForm("SearchProvider", "Search"))
-            {
-                <div id="form-search" class="input-group">
-                    @Html.TextBox("searched", "", new { @class = "form-control", @id = "search-field" })
-                    <div class="input-group-btn">
-                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+            <div class="col-md-2"></div>
+            <div id="right-menu" class="col-md-2">
+                @if (current_user != null)
+                {
+                    <div class="btn-group">
+                        <a class="btn btn-link" data-toggle="dropdown" id="link">
+                            <span class="glyphicon glyphicon-cog"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>@Html.ActionLink("Sair", "SignOut", "User")</li>
+                        </ul>
                     </div>
+                    @Html.ActionLink(current_user.Username, "Profile", "User", current_user.ID, new { @class = "btn btn-link", @id = "link" })
+                }
+                else
+                {
+                    <a data-toggle="modal" href="#myModal" class="btn btn-link" id="link">Entrar</a>
+                }
+            </div>
+            <div class="col-md-1">
+                <div id="icons">
+                    <a href="#"><img src="@Url.Content("~/Content/Images/Site/Icons/face-icon.png")" /></a>
+                    <a href="#"><img src="@Url.Content("~/Content/Images/Site/Icons/twitter-icon.png")" /></a>
+                    <a href="#"><img src="@Url.Content("~/Content/Images/Site/Icons/pint-icon.png")" /></a>
                 </div>
-            }
+            </div>
+            <div class="col-md-4" id="search">
+                @using (Html.BeginForm("SearchProvider", "Search"))
+                {
+                    <div id="form-search" class="input-group">
+                        @Html.TextBox("searched", "", new { @class = "form-control", @id = "search-field" })
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </div>
+                }
 
+            </div>
         </div>
+        @RenderBody()
     </div>
-    @RenderBody()
-    <div class="row"><div class="col-lg-12" id="bottom-site"></div></div>
+    <div class="col-lg-12" id="bottom-site"></div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/jqueryui.js")
     @Scripts.Render("~/bootstrap.js")

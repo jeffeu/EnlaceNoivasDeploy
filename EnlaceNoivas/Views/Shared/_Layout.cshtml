@@ -19,13 +19,38 @@
 <body>
     <div id="content">
         <div id="nav-top" class="row">
-            <div class="col-md-1"></div>
             <div class="col-md-2">
                 <div id="logo">
                     <a href="@Url.Action("Index","Home")"><img src="@Url.Content("~/Content/Images/Site/enlace-logo.png")" /></a>
                 </div>
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-4" id="menu-links">
+                <div id="links">
+                <a href="#">SITE DOS NOIVOS</a>
+                <a href="#">GUIA DE FORNECEDORES</a>
+                <a href="#">DICAS DE CASAMENTO</a>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div id="icons">
+                    <a href="http://pt-br.facebook.com/guiaenlace"><img title="Facebook" src="@Url.Content("~/Content/Images/Site/Icons/face-icon.png")" /></a>
+                    <a href="http://twitter.com/guiaenlace"><img title="Twiter" src="@Url.Content("~/Content/Images/Site/Icons/twitter-icon.png")" /></a>
+                    <a href="http://instagram.com/guiaenlace"><img title="Instagran" src="@Url.Content("~/Content/Images/Site/Icons/pint-icon.png")" /></a>
+                    <a href="http://pinterest.com/guiaenlace"><img title="Pinterest" src="@Url.Content("~/Content/Images/Site/Icons/print-icon.png")" /></a>
+                </div>
+            </div>
+            <div class="col-md-3" id="search">
+                @using (Html.BeginForm("SearchProvider", "Search"))
+                {
+                    <div id="form-search" class="input-group">
+                        @Html.TextBox("searched", "", new { @class = "form-control", @id = "search-field" })
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </div>
+                }
+
+            </div>
             <div id="right-menu" class="col-md-2">
                 @if (current_user != null)
                 {
@@ -44,27 +69,10 @@
                     <a data-toggle="modal" href="#myModal" class="btn btn-link" id="link">Entrar</a>
                 }
             </div>
-            <div class="col-md-1">
-                <div id="icons">
-                    <a href="#"><img src="@Url.Content("~/Content/Images/Site/Icons/face-icon.png")" /></a>
-                    <a href="#"><img src="@Url.Content("~/Content/Images/Site/Icons/twitter-icon.png")" /></a>
-                    <a href="#"><img src="@Url.Content("~/Content/Images/Site/Icons/pint-icon.png")" /></a>
-                </div>
-            </div>
-            <div class="col-md-4" id="search">
-                @using (Html.BeginForm("SearchProvider", "Search"))
-                {
-                    <div id="form-search" class="input-group">
-                        @Html.TextBox("searched", "", new { @class = "form-control", @id = "search-field" })
-                        <div class="input-group-btn">
-                            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                        </div>
-                    </div>
-                }
-
-            </div>
+          
         </div>
         @RenderBody()
+        <div id="space"></div>
     </div>
     <div class="col-lg-12" id="bottom-site"></div>
     @Scripts.Render("~/bundles/jquery")

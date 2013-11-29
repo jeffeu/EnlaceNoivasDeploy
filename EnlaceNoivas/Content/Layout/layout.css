@@ -11,7 +11,9 @@ html,body {
     min-height:75%;
 }
 #logo {
-    margin-top:15px;
+    margin-top:10px;
+    margin-left:45px;
+    margin-bottom:15px;
 }
 #icons{
     margin-top:20px;
@@ -28,7 +30,6 @@ html,body {
 #nav-top {
     border-bottom: 5px solid #19a8b8;
     background: #0ac0d5;
-    height: 70px;
 }
 #nav-top #search #form-search {
     margin-top:12px;
@@ -57,17 +58,13 @@ html,body {
 #nav-top #right-menu #link {
     float:right;
     color:white;
-    margin-right:2px;
+    font-size:18px;
+    margin-right:35px;
     margin-top:12px;
     margin-bottom:12px;
 }
 #nav-top #right-menu #link:hover {
-    text-shadow:2px 2px rgba(0, 0, 0, 0.1);
-    text-decoration:none;
-    font-size:18px;
-    margin-right:-2px;
-    margin-top:10px;
-    margin-bottom:10px;
+    color:#D9F0F7;
 }
 #form-login .form-group .link-forgot-pass {
     margin-left:40px;
@@ -128,4 +125,18 @@ DIV#image {
     width:100%;
     min-height:25%;
     background:#95d0d7;
+}
+#links{
+    margin-top:20px;
+}
+#menu-links >#links > a{
+    color:#fff;
+    margin-left:5px;
+    font-size:12px;
+}
+#menu-links >#links > a:hover{
+    color:#D9F0F7;
+}
+#space {
+    height:50px;
 }

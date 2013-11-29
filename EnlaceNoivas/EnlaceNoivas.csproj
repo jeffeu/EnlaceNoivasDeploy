@@ -235,6 +235,7 @@
     <Content Include="Content\Images\Site\enlace-logo.png" />
     <Content Include="Content\Images\Site\Icons\face-icon.png" />
     <Content Include="Content\Images\Site\Icons\pint-icon.png" />
+    <Content Include="Content\Images\Site\Icons\print-icon.png" />
     <Content Include="Content\Images\Site\Icons\twitter-icon.png" />
     <Content Include="Content\Images\Site\start-here.png" />
     <Content Include="Content\Layout\layout.css" />

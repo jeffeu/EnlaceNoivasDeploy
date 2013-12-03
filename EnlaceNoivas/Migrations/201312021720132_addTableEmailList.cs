@@ -3,18 +3,17 @@ namespace EnlaceNoivas.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddIdToUser : DbMigration
+    public partial class addTableEmailList : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Users",
+                "dbo.EmailLists",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        username = c.String(nullable: false, maxLength: 40),
-                        pass = c.String(nullable: false, maxLength: 40),
-                        email = c.String(nullable: false),
+                        Email = c.String(),
+                        TimeStamp = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -22,7 +21,7 @@ namespace EnlaceNoivas.Migrations
         
         public override void Down()
         {
-            DropTable("dbo.Users");
+            DropTable("dbo.EmailLists");
         }
     }
 }

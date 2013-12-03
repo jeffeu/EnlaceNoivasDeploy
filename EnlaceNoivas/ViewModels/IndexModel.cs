@@ -10,5 +10,6 @@ namespace EnlaceNoivas.ViewModels
     {
         public IQueryable<PostBlog> Posts { get; set; }
         public IQueryable<Couple> TopCouples { get; set; }
+        public EmailList EmailList { get; set; }
     }
 }

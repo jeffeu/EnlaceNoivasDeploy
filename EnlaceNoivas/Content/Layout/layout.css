@@ -140,3 +140,21 @@ DIV#image {
 #space {
     height:50px;
 }
+.btn-blueblack{
+    border:1px solid #0ac0d5;
+    color: #fff;
+    background: #3A9DBB;
+}
+.btn-blueblack:hover{
+    border:1px solid #D9F0F7;
+    color: #0ac0d5;
+    background: #fff;
+}
+.btn-oval-right{
+    border-bottom-right-radius:15px;
+    border-top-right-radius:15px;
+}
+.btn-oval-left{
+    border-bottom-left-radius:15px;
+    border-top-left-radius:15px;
+}

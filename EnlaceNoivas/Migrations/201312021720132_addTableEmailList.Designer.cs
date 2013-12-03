@@ -5,13 +5,13 @@ namespace EnlaceNoivas.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class FixCoupleTable : IMigrationMetadata
+    public sealed partial class addTableEmailList : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(FixCoupleTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addTableEmailList));
         
         string IMigrationMetadata.Id
         {
-            get { return "201309121738167_FixCoupleTable"; }
+            get { return "201312021720132_addTableEmailList"; }
         }
         
         string IMigrationMetadata.Source

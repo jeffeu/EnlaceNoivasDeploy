@@ -5,13 +5,13 @@ namespace EnlaceNoivas.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class AddTablesProviderAdressAndPhone : IMigrationMetadata
+    public sealed partial class alteridnameinEmailList : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddTablesProviderAdressAndPhone));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(alteridnameinEmailList));
         
         string IMigrationMetadata.Id
         {
-            get { return "201309161441145_AddTablesProviderAdressAndPhone"; }
+            get { return "201312021741453_alteridnameinEmailList"; }
         }
         
         string IMigrationMetadata.Source

@@ -1,4 +1,5 @@
 ﻿@model EnlaceNoivas.ViewModels.IndexModel
+@using EnlaceNoivas.Helpers
 @{
     ViewBag.Title = "Enlace Noivas";
     ViewBag.Controller = "Home";
@@ -21,7 +22,7 @@
                         <div id="text-bunner">
                             <p>Crie o site do seu</p>
                             <p>casamento gratuitamente</p>
-                            @Html.ActionLink("Cadastrar-se", "Create", "Couple", new { @class="btn btn-info"})
+                            @Html.ActionLink("Cadastrar-se", "Create", "User",null, new { @class="btn btn-info"})
                         </div>
                     </div>
                 </div>
@@ -53,8 +54,20 @@
     <div class="col-lg-1"></div>
     <div class="col-lg-7">
         <div class="row">
-            <div class="bunner-start-here">
-                <img src="@Url.Content("~/Content/Images/Site/start-here.png")" />
+            <div class="col-lg-4">
+                <div class="provider-space">
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="provider-space">
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="provider-space">
+
+                </div>
             </div>
         </div>
         <h2 id="blog-header">Blog</h2>
@@ -81,7 +94,7 @@
         <div id="top-couples">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3>os 5 Sites mais visitados</h3>
+                    <p>Os 5 Sites mais visitados</p>
                 </div>
             </div>
             @* com erros a serem convertados*@
@@ -102,10 +115,30 @@
             *@
             <div class="row top-title">
                 <div class="col-lg-12">
-                    <h4>Crie seu site e ganhe prêmios!</h4>
+                    <p>Crie seu site e ganhe prêmios!</p>
                 </div>
             </div>
             <div class="col-lg-1"></div>
+        </div>
+        <div class="row">
+            <div class="send-email">
+                <div class="col-lg-12">
+                    <p>Receber Novidades</p>
+                    @if (!TagHelper.isEmpity(Html.ValidationMessageFor(m => m.EmailList.Email).ToString()))
+                    {
+                         <p class="error-warning">@Html.ValidationMessageFor(m => m.EmailList.Email)</p>
+                    }
+                    @using (Html.BeginForm("Register","Email"))
+                    {
+                        <div class="input-group">
+                            @Html.TextBoxFor(m => m.EmailList.Email,"", new { @class = "form-control", @placeholder = "Insira seu e-mail..." })
+                            <div class="input-group-btn">
+                                <input type="submit" value="enviar" class="btn btn-blueblack btn-oval-right"/>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
         </div>
     </div>
 </div>

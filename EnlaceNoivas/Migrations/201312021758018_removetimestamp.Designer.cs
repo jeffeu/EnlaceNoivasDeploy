@@ -5,13 +5,13 @@ namespace EnlaceNoivas.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class AddNewProbiderTable : IMigrationMetadata
+    public sealed partial class removetimestamp : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddNewProbiderTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(removetimestamp));
         
         string IMigrationMetadata.Id
         {
-            get { return "201309231434217_AddNewProbiderTable"; }
+            get { return "201312021758018_removetimestamp"; }
         }
         
         string IMigrationMetadata.Source

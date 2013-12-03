@@ -13,5 +13,6 @@ namespace EnlaceNoivas.Models
         public DbSet<Provider> Provider { get; set; }
         public DbSet<PhotoOfProvider> PhotoOfProvider { get; set; }
         public DbSet<PostBlog> PostBlog { get; set; }
+        public DbSet<EmailList> EmailList { get; set; }
     }
 }

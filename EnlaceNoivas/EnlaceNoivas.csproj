@@ -125,6 +125,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProviderController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
@@ -134,89 +135,22 @@
     </Compile>
     <Compile Include="Helpers\LoginHelper.cs" />
     <Compile Include="Helpers\TagHelper.cs" />
-    <Compile Include="Migrations\201309051815221_AddIdToUser.cs" />
-    <Compile Include="Migrations\201309051815221_AddIdToUser.Designer.cs">
-      <DependentUpon>201309051815221_AddIdToUser.cs</DependentUpon>
+    <Compile Include="Migrations\201312021720132_addTableEmailList.cs" />
+    <Compile Include="Migrations\201312021720132_addTableEmailList.Designer.cs">
+      <DependentUpon>201312021720132_addTableEmailList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201309051829147_TryDoItHappen.cs" />
-    <Compile Include="Migrations\201309051829147_TryDoItHappen.Designer.cs">
-      <DependentUpon>201309051829147_TryDoItHappen.cs</DependentUpon>
+    <Compile Include="Migrations\201312021741453_alteridnameinEmailList.cs" />
+    <Compile Include="Migrations\201312021741453_alteridnameinEmailList.Designer.cs">
+      <DependentUpon>201312021741453_alteridnameinEmailList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201309102015579_AddTableCoupleAndJoinToUser.cs" />
-    <Compile Include="Migrations\201309102015579_AddTableCoupleAndJoinToUser.Designer.cs">
-      <DependentUpon>201309102015579_AddTableCoupleAndJoinToUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309121454219_ChangeFKFromCoupleToUser.cs" />
-    <Compile Include="Migrations\201309121454219_ChangeFKFromCoupleToUser.Designer.cs">
-      <DependentUpon>201309121454219_ChangeFKFromCoupleToUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309121733081_deleteCouple.cs" />
-    <Compile Include="Migrations\201309121733081_deleteCouple.Designer.cs">
-      <DependentUpon>201309121733081_deleteCouple.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309121738167_FixCoupleTable.cs" />
-    <Compile Include="Migrations\201309121738167_FixCoupleTable.Designer.cs">
-      <DependentUpon>201309121738167_FixCoupleTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309121926594_isanychange.cs" />
-    <Compile Include="Migrations\201309121926594_isanychange.Designer.cs">
-      <DependentUpon>201309121926594_isanychange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309161441145_AddTablesProviderAdressAndPhone.cs" />
-    <Compile Include="Migrations\201309161441145_AddTablesProviderAdressAndPhone.Designer.cs">
-      <DependentUpon>201309161441145_AddTablesProviderAdressAndPhone.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309161651476_AddSiteTypeAndImageToProvider.cs" />
-    <Compile Include="Migrations\201309161651476_AddSiteTypeAndImageToProvider.Designer.cs">
-      <DependentUpon>201309161651476_AddSiteTypeAndImageToProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309161704348_AddUserToProvider.cs" />
-    <Compile Include="Migrations\201309161704348_AddUserToProvider.Designer.cs">
-      <DependentUpon>201309161704348_AddUserToProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309171434524_removePhoneTableAndAddPhonesFieldsToProvider.cs" />
-    <Compile Include="Migrations\201309171434524_removePhoneTableAndAddPhonesFieldsToProvider.Designer.cs">
-      <DependentUpon>201309171434524_removePhoneTableAndAddPhonesFieldsToProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309191755555_changeImageName.cs" />
-    <Compile Include="Migrations\201309191755555_changeImageName.Designer.cs">
-      <DependentUpon>201309191755555_changeImageName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309231428215_tryFixit.cs" />
-    <Compile Include="Migrations\201309231428215_tryFixit.Designer.cs">
-      <DependentUpon>201309231428215_tryFixit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309231434217_AddNewProbiderTable.cs" />
-    <Compile Include="Migrations\201309231434217_AddNewProbiderTable.Designer.cs">
-      <DependentUpon>201309231434217_AddNewProbiderTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309231502058_IDontKnow.cs" />
-    <Compile Include="Migrations\201309231502058_IDontKnow.Designer.cs">
-      <DependentUpon>201309231502058_IDontKnow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309301507366_changeSomeFieldsName.cs" />
-    <Compile Include="Migrations\201309301507366_changeSomeFieldsName.Designer.cs">
-      <DependentUpon>201309301507366_changeSomeFieldsName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201309301654067_somethingthatidontknow.cs" />
-    <Compile Include="Migrations\201309301654067_somethingthatidontknow.Designer.cs">
-      <DependentUpon>201309301654067_somethingthatidontknow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201310211723015_AddPhotoOdProviderTable.cs" />
-    <Compile Include="Migrations\201310211723015_AddPhotoOdProviderTable.Designer.cs">
-      <DependentUpon>201310211723015_AddPhotoOdProviderTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311041653125_AddCountVoteToCouple.cs" />
-    <Compile Include="Migrations\201311041653125_AddCountVoteToCouple.Designer.cs">
-      <DependentUpon>201311041653125_AddCountVoteToCouple.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201311061347599_addPostBlogTable.cs" />
-    <Compile Include="Migrations\201311061347599_addPostBlogTable.Designer.cs">
-      <DependentUpon>201311061347599_addPostBlogTable.cs</DependentUpon>
+    <Compile Include="Migrations\201312021758018_removetimestamp.cs" />
+    <Compile Include="Migrations\201312021758018_removetimestamp.Designer.cs">
+      <DependentUpon>201312021758018_removetimestamp.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Couple.cs" />
     <Compile Include="Models\db.cs" />
+    <Compile Include="Models\EmailList.cs" />
     <Compile Include="Models\PhotoOfProvider.cs" />
     <Compile Include="Models\PostBlog.cs" />
     <Compile Include="Models\Provider.cs" />
@@ -354,65 +288,14 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201309051815221_AddIdToUser.resx">
-      <DependentUpon>201309051815221_AddIdToUser.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201312021720132_addTableEmailList.resx">
+      <DependentUpon>201312021720132_addTableEmailList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309051829147_TryDoItHappen.resx">
-      <DependentUpon>201309051829147_TryDoItHappen.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201312021741453_alteridnameinEmailList.resx">
+      <DependentUpon>201312021741453_alteridnameinEmailList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309102015579_AddTableCoupleAndJoinToUser.resx">
-      <DependentUpon>201309102015579_AddTableCoupleAndJoinToUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309121454219_ChangeFKFromCoupleToUser.resx">
-      <DependentUpon>201309121454219_ChangeFKFromCoupleToUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309121733081_deleteCouple.resx">
-      <DependentUpon>201309121733081_deleteCouple.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309121738167_FixCoupleTable.resx">
-      <DependentUpon>201309121738167_FixCoupleTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309121926594_isanychange.resx">
-      <DependentUpon>201309121926594_isanychange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309161441145_AddTablesProviderAdressAndPhone.resx">
-      <DependentUpon>201309161441145_AddTablesProviderAdressAndPhone.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309161651476_AddSiteTypeAndImageToProvider.resx">
-      <DependentUpon>201309161651476_AddSiteTypeAndImageToProvider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309161704348_AddUserToProvider.resx">
-      <DependentUpon>201309161704348_AddUserToProvider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309171434524_removePhoneTableAndAddPhonesFieldsToProvider.resx">
-      <DependentUpon>201309171434524_removePhoneTableAndAddPhonesFieldsToProvider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309191755555_changeImageName.resx">
-      <DependentUpon>201309191755555_changeImageName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309231428215_tryFixit.resx">
-      <DependentUpon>201309231428215_tryFixit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309231434217_AddNewProbiderTable.resx">
-      <DependentUpon>201309231434217_AddNewProbiderTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309231502058_IDontKnow.resx">
-      <DependentUpon>201309231502058_IDontKnow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309301507366_changeSomeFieldsName.resx">
-      <DependentUpon>201309301507366_changeSomeFieldsName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201309301654067_somethingthatidontknow.resx">
-      <DependentUpon>201309301654067_somethingthatidontknow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201310211723015_AddPhotoOdProviderTable.resx">
-      <DependentUpon>201310211723015_AddPhotoOdProviderTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311041653125_AddCountVoteToCouple.resx">
-      <DependentUpon>201311041653125_AddCountVoteToCouple.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201311061347599_addPostBlogTable.resx">
-      <DependentUpon>201311061347599_addPostBlogTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201312021758018_removetimestamp.resx">
+      <DependentUpon>201312021758018_removetimestamp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

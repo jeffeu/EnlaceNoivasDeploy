@@ -3,16 +3,16 @@ namespace EnlaceNoivas.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddCountVoteToCouple : DbMigration
+    public partial class removetimestamp : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Couples", "VouteCount", c => c.Int(nullable: false));
+            DropColumn("dbo.EmailLists", "TimeStamp");
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Couples", "VouteCount");
+            AddColumn("dbo.EmailLists", "TimeStamp", c => c.DateTime(nullable: false));
         }
     }
 }

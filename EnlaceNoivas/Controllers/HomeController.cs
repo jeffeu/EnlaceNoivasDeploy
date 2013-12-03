@@ -19,7 +19,8 @@ namespace EnlaceNoivas.Controllers
         {
             IndexModel model = new IndexModel() { 
                 TopCouples = db.Couple.OrderBy(c => c.VouteCount).Take(5), 
-                Posts= db.PostBlog.Take(6)};
+                Posts= db.PostBlog.Take(6),
+                EmailList = new EmailList()};
             return View(model);
         }
 

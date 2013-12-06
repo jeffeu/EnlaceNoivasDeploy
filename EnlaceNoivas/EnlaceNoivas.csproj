@@ -39,13 +39,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.1.1\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Mvc.Mailer">
       <HintPath>..\packages\MvcMailer.4.5\lib\45\Mvc.Mailer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -62,9 +74,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -119,6 +128,15 @@
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Zen">
+      <HintPath>..\packages\Zen.Core.1.1.0.53\lib\net45\Zen.dll</HintPath>
+    </Reference>
+    <Reference Include="Zen.DataStore">
+      <HintPath>..\packages\Zen.Core.1.1.0.53\lib\net45\Zen.DataStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Zen.DataStore.EntityFramework">
+      <HintPath>..\packages\Zen.Core.EntityFramework.1.1.0.53\lib\net45\Zen.DataStore.EntityFramework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -147,6 +165,10 @@
     <Compile Include="Migrations\201312021758018_removetimestamp.Designer.cs">
       <DependentUpon>201312021758018_removetimestamp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312031632116_aalgoaqui.cs" />
+    <Compile Include="Migrations\201312031632116_aalgoaqui.Designer.cs">
+      <DependentUpon>201312031632116_aalgoaqui.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Couple.cs" />
     <Compile Include="Models\db.cs" />
@@ -171,6 +193,7 @@
     <Content Include="Content\Images\Site\Icons\pint-icon.png" />
     <Content Include="Content\Images\Site\Icons\print-icon.png" />
     <Content Include="Content\Images\Site\Icons\twitter-icon.png" />
+    <Content Include="Content\Images\Site\new-logo-enlace.png" />
     <Content Include="Content\Images\Site\start-here.png" />
     <Content Include="Content\Layout\layout.css" />
     <Content Include="Content\Provider\Create.css" />
@@ -296,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201312021758018_removetimestamp.resx">
       <DependentUpon>201312021758018_removetimestamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312031632116_aalgoaqui.resx">
+      <DependentUpon>201312031632116_aalgoaqui.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

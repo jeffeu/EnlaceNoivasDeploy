@@ -66,9 +66,6 @@ html,body {
 #nav-top #right-menu #link:hover {
     color:#D9F0F7;
 }
-#form-login .form-group .link-forgot-pass {
-    margin-left:40px;
-}
 #form-login .form-group #btn-enter {
     width:30%;
 }
@@ -157,4 +154,29 @@ DIV#image {
 .btn-oval-left{
     border-bottom-left-radius:15px;
     border-top-left-radius:15px;
+}
+.border-none{
+    border:none;
+}
+.logo-enlace-login-form{
+    margin:10px 90px 20px;
+}
+.links-form-goup{
+    margin-left:20px;
+}
+.links-form-goup > #link{
+
+    display:initial;
+    margin:10px;
+}
+.links-form-goup > #link > a{
+    color:#b9b9b9;
+}
+.links-form-goup > #link > a:hover{
+    color:#929292;
+}
+.icon-login-form{
+    font-size: 18px;
+    margin-top: 6px;
+    color: #cbcbcd;
 }

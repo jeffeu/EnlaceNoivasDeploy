@@ -19,8 +19,8 @@ namespace EnlaceNoivas
             );
             routes.MapRoute(
                 name: "SearchPage",
-                url: "Search/SearchProvider/{searched}/{page}",
-                defaults: new { controller = "Search", action = "SearchProvider", page = UrlParameter.Optional, searched = UrlParameter.Optional }
+                url: "Fornecedor/Proucurar/{searched}/{page}",
+                defaults: new { controller = "Search", action = "SearchProvider"}
             );
             routes.MapRoute(
                 name: "Default",

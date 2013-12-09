@@ -21,7 +21,7 @@ namespace EnlaceNoivas.Models
 
 
         public User User { get; set; }
-
+        public ProviderType ProviderType { get; set; }
         [NotMapped]
         public string ImagePath
         {

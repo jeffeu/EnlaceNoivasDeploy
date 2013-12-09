@@ -169,6 +169,10 @@
     <Compile Include="Migrations\201312031632116_aalgoaqui.Designer.cs">
       <DependentUpon>201312031632116_aalgoaqui.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312091622267_addTableProviderType.cs" />
+    <Compile Include="Migrations\201312091622267_addTableProviderType.Designer.cs">
+      <DependentUpon>201312091622267_addTableProviderType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Couple.cs" />
     <Compile Include="Models\db.cs" />
@@ -176,6 +180,7 @@
     <Compile Include="Models\PhotoOfProvider.cs" />
     <Compile Include="Models\PostBlog.cs" />
     <Compile Include="Models\Provider.cs" />
+    <Compile Include="Models\ProviderType.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CoupleUser.cs" />
@@ -322,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201312031632116_aalgoaqui.resx">
       <DependentUpon>201312031632116_aalgoaqui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312091622267_addTableProviderType.resx">
+      <DependentUpon>201312091622267_addTableProviderType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
